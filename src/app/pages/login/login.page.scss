@@ -1,0 +1,53 @@
+.nouveau{
+    //color:red;
+    color:  turquoise;
+    //font-weight: 450;
+}
+
+.info-1 {
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    font-family:"times new roman";
+}
+
+.fond{
+    background: rgb(255, 255, 255);
+    color: black;
+    //border:1px solid rgb(188, 188, 255);
+    text-align: center;
+    font-family:"times new roman";
+    font-size:95%;
+    //border-radius: 15px;
+    //width: 00px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ion-slide{
+    background: rgb(255, 255, 255);
+  }
+
+  .boutonAccueil{
+    position:absolute; 
+    left:50%; 
+    top:10%; 
+    transform: translate(-50%, -50%);
+  }
+  .boutonCard{
+    position:relative; 
+    left:35%; 
+    top:20%; 
+    transform: translate(-50%, -50%);
+  }
+
+ion-card{
+    background: transparent;
+    color: turquoise;
+}
+
+ion-button{
+    --background: transparent; //radial-gradient(circle at -4.17% 95.45%, #7842de 0, #5330d1 25%, #111ec2 50%, #000fb3 75%, #0009a6 100%);
+    color: #0085ff;
+    font-family:"Rockwell";
+    font-size:95%;
+  }

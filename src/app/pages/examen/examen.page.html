@@ -1,0 +1,113 @@
+<ion-header >
+  <ion-toolbar class="new-background">
+    <!--<ion-buttons slot="start">
+      <ion-button (click)="backToLogin()">
+        <ion-icon name="arrow-undo"></ion-icon>
+      </ion-button>
+    </ion-buttons>-->
+    <ion-title class="titrePolice" (click)= "functionReturn()">YameKa</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="prosesLogout()">
+        <ion-icon slot="icon-only" name="exit"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-header class="homeHeader" >
+  <h4 class="ion-text-center textPolice">{{pageName}}</h4>
+</ion-header>
+
+<!--<ion-header >
+  <ion-grid [fixed]="true">
+
+    
+
+  <ion-row>
+     <ion-col size="4" style="font-family:times new roman; font-size:100%;">Examen :</ion-col> -->
+  
+   <!-- <ion-col  class="ion-text-center clear ">
+      <ion-select interface="popover"  (ionChange)="HideFunction(1); autoresearche(0)" placeholder="Selectionnez votre examen" [(ngModel)]="value" class="textPolice" style="background-color: white; border-radius: 10px; height:30px;">
+        <ion-label>label</ion-label>
+        <ion-select-option *ngFor="let examen of examens">{{examen.NomExamen}}</ion-select-option>
+      </ion-select>
+    </ion-col>
+    <br> -->
+
+    <!--<ion-col  class="ion-text-center clear" >
+      <ion-select  (ionChange)="HideFunction(1); autoresearche(0)" placeholder="Selectionnez votre examen" [(ngModel)]="value" class="textPolice" style="background-color: white; border-radius: 10px; height:30px;">
+        <ion-select-option *ngFor="let examen of examens">{{examen.NomExamen}}</ion-select-option>
+      </ion-select>
+    </ion-col>
+    <br> -->
+    <!--<ion-col size="12" class="ion-text-center clear" [hidden]="HIDE1">
+      <ion-select (ionChange)="HideFunction(2); autoresearche(0)" placeholder="Selectionnez votre ville" [(ngModel)]="ville" class="textPolice" style="background-color: white; border-radius: 10px; height:30px;">
+        <ion-select-option *ngFor="let ville of villes">{{ville.NomVille}}</ion-select-option>
+      </ion-select>
+    </ion-col>-->
+    <!--<br>
+    <ion-col size="12" class="ion-text-center clear" [hidden]="HIDE2">
+      <ion-select (ionChange)="autoresearche(3)" placeholder="Selectionnez votre secteur" [(ngModel)]="sectr" class="textPolice" style="background-color: white; border-radius: 10px; height:30px;">
+        <ion-select-option *ngFor="let sectr of sectrs">{{sectr.NomSecteur}}</ion-select-option>
+      </ion-select>
+    </ion-col>-->
+    <!--<br><br><br> 
+    <ion-col size="12">
+        <ion-button class="ion-text-center cardRech bouttnRecherche" (click)="recherchExamen()" id="recherche" color=white;  type="submit" >Chercher</ion-button> 
+    </ion-col> 
+  </ion-row>
+</ion-grid>
+</ion-header>-->
+
+<ion-content>
+  <ion-row>
+    <ion-col size="12">
+      <ion-searchbar #search  (click)="ShowList(1);" class="clear textPolice listes textPolice" (ionChange)="writingInSearch($event,1);  autoresearche(0); HideFunction(1)" [(ngModel)]="ListeValue" placeholder="Examen"></ion-searchbar>       
+      <ion-list [hidden] = "hideListe" lines="none"  class="textPolice OverflowList listLin" >
+        <ion-item   *ngFor="let item of searchedItem" (click)="selectItem(item.NomExamen,1) " class="textPolice SearchBaListe">
+          <ion-label>{{ item.NomExamen }}</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-col>
+    <ion-col size="12" [hidden] = "hideColville">
+      <ion-searchbar #town [hidden]="HIDE1"  (click)="ShowList(2)" class="clear textPolice listes" (ionChange)="writingInSearch($event,2); autoresearche(1); HideFunction(2)" [(ngModel)]="ListeValueVille" placeholder="Ville"></ion-searchbar>
+      <ion-list  [hidden] = "hideListVille" lines="none" class="textPolice OverflowList listLin">
+        <ion-item   *ngFor="let item of searchedVille" class=" textPolice SearchBaListe" (click)="selectItem(item.NomVille,2)">
+          {{ item.NomVille }}
+        </ion-item>
+      </ion-list>
+    </ion-col>
+    <ion-col size="12" [hidden]="hideColsecteur">
+      <ion-searchbar #secter [hidden]="HIDE2"   (click)="ShowList(3)" class="clear textPolice listes" (ionChange)="writingInSearch($event,3); autoresearche(3)" [(ngModel)]="ListeValueSecteurs" placeholder="Quartier"></ion-searchbar>
+      <ion-list [hidden] = "hideListSecteurs" lines="none" class="textPolice OverflowList listLin">
+        <ion-item *ngFor="let item of searchedSecteur" class="textPolice SearchBaListe" (click)="selectItem(item.NomSecteur,3)">
+          {{ item.NomSecteur }}
+        </ion-item>
+      </ion-list>
+    </ion-col>
+  </ion-row>
+
+  <ion-row [hidden]="hideColville" [hidden]="hideColsecteur" [hidden]="hideRowstructure">
+    <!-- Recuperation des données sur les laboratoires -->
+    <ion-col size="12" class="ion-text-center">
+      <ion-card class="structucardStyle " *ngFor="let structure of structures; let index = index;" >
+        <ion-item class="textOverflow textPolice">
+            {{structure.NomStructure}}
+          <ion-button slot="end"  (click)="showLabo(structure.NomStructure, index)">Voir</ion-button>
+        </ion-item>
+
+        <!-- Brèves informations sur le laboratoire -->
+        <ion-card-content class="ion-text-justify textPolice detailstextOverflow">
+          <span>Prix: {{structure.Prix}}  F.CFA<br></span>
+          <span>Ouvert: {{structure.Jour}}</span>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-content>
+
+<!--<ion-footer>
+  <ion-toolbar>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-footer> -->

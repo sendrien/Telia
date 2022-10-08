@@ -1,0 +1,157 @@
+#container {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#container strong {
+    font-size: 20px;
+    line-height: 26px;
+}
+
+#container p {
+    font-size: 16px;
+    line-height: 22px;
+    color: #8c8c8c;
+    margin: 0;
+}
+
+#container a {
+    text-decoration: none;
+}
+
+.customBtn{
+    width:240px;
+    background:darkkhaki;
+    border-radius: 100px;
+}
+
+.textButon{
+    text-align: center;
+    padding: 0px 0px 20px 0px;
+}
+
+.textColor{
+    color: #3b088dfb;
+    text-decoration: underline;
+}
+
+.centered{
+    text-align: center;
+    margin-left: -15%
+}
+
+.items{
+    color:#3880ff;
+}
+
+.homePage {
+    background: #1b703d;
+    color: #333;
+}
+
+
+.avat{
+    
+    text-align: left;
+    font-family:'times new roman';
+    font-size:12px;   
+}
+
+
+.homeHeader {
+    background: #2dd36f;
+    color:#fff;
+    height: 40px;
+}
+
+.homeCardItems{
+    background: rgb(9, 46, 133);
+    color: #fff;
+    height: 510px;
+    border-radius: 10px;
+}
+
+.textOverflow{
+    margin: 0;
+    display: block;
+    overflow: hidden;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    font-size: inherit;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.selectBar{
+    border-radius: 10px;
+    padding: 20px 10px 20px 10px;
+}
+
+.homeCard{
+    background: rgb(35, 42, 58);
+    color: #fff;
+    height: 100px;
+    border-radius: 10px;
+}
+
+.blockCardHeaderItems{
+    //background: rgb(35, 42, 58);
+    color: #fff;
+    border-radius: 10px;
+    height: 71px;
+    margin-bottom: 60px;
+}
+
+.blockCardTitleItems{
+    //background: rgb(35, 42, 58);
+    //color: #fff;
+    height: 50px;
+    //border-radius: 10px;
+    margin-top: -50px;
+}
+
+.okBtn{
+    border-radius: 300px;
+    
+}
+
+.titleColor{
+    color: black;
+    font-family:"times new roman";
+    font-size:95%;
+}
+
+.formCardLabor{
+    width: 300px;
+    height: 430px;
+    background:white;
+}
+
+.slide-one {
+    background: #2dd36f;
+    color: #333;
+}
+
+ion-content {
+    --offset-bottom: auto!important;
+    background: white;
+    background-color: #fff;
+    --overflow: hidden;
+    overflow: auto;
+    &::-webkit-scrollbar {
+    display: none;
+    }
+}
+
+.StyleBande{
+    border-left: 10px solid #2dd36f;
+    border-right: 10px solid #2dd36f;
+    border-radius: 10px;
+    box-shadow:  16px 16px 32px #dddddd,-16px -16px 32px #d6d6d6;
+}

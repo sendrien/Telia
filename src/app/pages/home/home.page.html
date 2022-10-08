@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar class="new-background">
+    <ion-title class="titrePolice " >YameKa</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="prosesLogout()">
+        <ion-icon slot="icon-only" name="exit"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-header class="homeHeader cadre-img">
+  <h4 class="ion-text-center textPolice">TYPES D'EXAMEN</h4>
+</ion-header>
+
+<!--<ion-header class="headerColor">
+  
+</ion-header>-->
+
+
+<ion-content>
+  
+      
+      <!--<ion-card class="homeCard ion-text-center textPolice">
+        <br>
+            <img src="./assets/icon.png"/>
+            <ion-item class="canale new-background">
+            <span class=" marquee-rtl">
+            {{bandeMessage.bandeannonce}}
+            </span>
+            </ion-item>
+      </ion-card>-->
+     <br>
+      <ion-row class="bounceInUp animated button" style="background-color: #fff; background: white;">
+        <ion-col size="6" size-lg size-sm class="clear"  *ngFor="let typeExam of typeExamen">
+          <ion-card class="infoBttn">
+            <ion-icon  (click)="info(typeExam.NomTypeExamen)" name="alert-circle-outline"></ion-icon>
+          </ion-card>
+          <ion-text class="col_div StyleItem button" (click)= "showExamens(typeExam.NomTypeExamen)" [value]="typeExam.NomTypeExamen">
+            <img class="imageInBton"  src= "./assets/{{typeExam.NomTypeExamen}}.png" />
+            <h6  class="textPolice" style="font-size: 14px; color: rgb(9, 46, 133); font-weight: 500;">{{typeExam.NomTypeExamen}}</h6>
+          </ion-text>
+        </ion-col>
+      </ion-row>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar class="new-background">
+    <ion-title class="textPolice canale ">
+      <span class=" marquee-rtl">
+        {{bandeMessage.bandeannonce}}
+      </span></ion-title>
+  </ion-toolbar>
+</ion-footer> 

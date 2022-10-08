@@ -1,0 +1,125 @@
+<ion-content>
+  <ion-slides pager="true">
+    <ion-slide class="slide-one">
+      <br>
+      <h3 class="textColor">Ajouter un admin</h3>
+      <ion-grid>
+        <ion-row class="ion-align-items-center">
+        <!-- Connexion -->
+          <ion-col size="12" class="ion-text-center">
+            <ion-item>
+              <ion-label>Nom<span style="color:red;">*</span> :</ion-label>
+              <ion-input type="text" placeholder="Nom" [(ngModel)]="your_name" clearInput ngModel required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label>Prenom<span style="color:red;">*</span> :</ion-label>
+              <ion-input type="text" placeholder="Prenom" [(ngModel)]="monPrenom" clearInput ngModel required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label>Email<span style="color:red;">*</span> :</ion-label>
+              <ion-input type="text" placeholder="Email" [(ngModel)]="email_address" clearInput ngModel required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label>Password<span style="color:red;">*</span> :</ion-label>
+                <ion-input type="password" placeholder="Password" [(ngModel)]="password" clearInput ngModel required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label>Confirmez<span style="color:red;">*</span> :</ion-label>
+              <ion-input type="password" placeholder="Confirmez" [(ngModel)]="confirm_pass" clearInput ngModel required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label>Tél<span style="color:red;">*</span> :</ion-label>
+              <ion-input id="telephone" [pattern]= "mobilPattern" name="tel" required placeholder="téléphone" [(ngModel)]="monTel" clearInput  #teleph="ngModel"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label>Rôle<span style="color:red;">*</span> :</ion-label>
+              <ion-input id="role" disabled  name="role" required [(ngModel)]="Role"></ion-input>
+            </ion-item>
+            <!-- Boutton de validation -->
+            <ion-col size="12" class="ion-text-center">
+              <ion-button (click)="crudAction('proses_crud')" class="ion-padding" expand="round"  color="success">Enregistrer</ion-button>
+            </ion-col>
+            <ion-col size="12">
+              <ion-button (click)="prosesLogout()" class="ion-padding" expand="round"  color="danger">Deconnexion</ion-button>
+            </ion-col>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+    
+    <ion-slide class="slide-one">
+      <br>
+      <h3 class="textColor">Types d'examen</h3>
+      <ion-grid>
+        <ion-row class="ion-align-items-center">
+        <!-- Connexion -->
+          <ion-col size="12" class="ion-text-center">
+            <ion-label>Nom</ion-label>
+            <ion-item>
+              <ion-input type="text" placeholder="types d'examen" [(ngModel)]="typeExam" clearInput ngModel required></ion-input>
+            </ion-item>
+            <!-- Boutton de validation -->
+            <ion-col size="12" class="ion-text-center">
+              <ion-button (click)="crudAction('proses_crud_type_exam')" class="ion-padding" expand="round"  color="success">Enregistrer</ion-button>
+            </ion-col>
+            <ion-col size="12">
+              <ion-button (click)="prosesLogout()" class="ion-padding" expand="round"  color="danger">Deconnexion</ion-button>
+            </ion-col>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+    <ion-slide class="slide-one">
+      <br>
+      <h3 class="textColor">Examens</h3>
+      <ion-grid>
+        <ion-row class="ion-align-items-center">
+        <!-- Connexion -->
+          <ion-col size="12" class="ion-text-center">
+            <ion-item class="selectBar">
+              <ion-label>choisisez le type correspondant</ion-label>
+              <ion-select  [(ngModel)]="value">
+                <ion-select-option *ngFor="let user of users">emih</ion-select-option>
+              </ion-select>
+            </ion-item>
+            <br>
+            <ion-label>Nom</ion-label>
+            <ion-item>
+              <ion-input type="text" placeholder="Examen" [(ngModel)]="Exam" clearInput ngModel required></ion-input>
+            </ion-item>
+            <!-- Boutton de validation -->
+            <ion-col size="12" class="ion-text-center">
+              <ion-button (click)="crudAction('proses_crud_exams')" class="ion-padding" expand="round"  color="success">Enregistrer</ion-button>
+            </ion-col>
+            <ion-col size="12">
+              <ion-button (click)="prosesLogout()" class="ion-padding" expand="round"  color="danger">Deconnexion</ion-button>
+            </ion-col>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+    <ion-slide class="slide-one">
+      <br>
+      <h3 class="textColor">Pharmacies</h3>
+      <ion-grid>
+        <ion-row class="ion-align-items-center">
+        <!-- Connexion -->
+          <ion-col size="12" class="ion-text-center">
+            <ion-label>Name :</ion-label>
+            <ion-item>
+              <ion-input type="text" placeholder="Your name" [(ngModel)]="your_name" clearInput ngModel required></ion-input>
+            </ion-item>
+            <!-- Boutton de validation -->
+            <ion-col size="12" class="ion-text-center">
+              <ion-button (click)="crudAction()" class="ion-padding" expand="round"  color="success">Enregistrer</ion-button>
+            </ion-col>
+            <ion-col size="12">
+              <ion-button (click)="prosesLogout()" class="ion-padding" expand="round"  color="danger">Deconnexion</ion-button>
+            </ion-col>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+
+  </ion-slides>
+</ion-content>

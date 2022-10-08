@@ -1,0 +1,94 @@
+ion-slide{
+    //background: linear-gradient(to bottom left, cyan 50%, palegoldenrod 50%);
+    //background: rgb(255, 255, 255);
+    background-image: url("/assets/e.png");
+    //background-position: center;
+    //color: rgb(191, 191, 191);
+    
+  }
+
+  .contact{
+    position:relative; 
+    left:12%; 
+    top:-35%; 
+    transform: translate(-50%, -50%);
+  }
+
+  .boutonContactCouleur{
+    --background:  linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+  }
+
+  .positionButtonSortir{
+    position:relative; 
+    left:0%; 
+    top:700%; 
+    transform: translate(-50%, -50%);
+  }
+
+  .positionButtonEntrer{
+    position:relative; 
+    left:50%; 
+    top:700%; 
+    transform: translate(-50%, -50%);
+  }
+
+  ion-button{
+    --background: transparent; //radial-gradient(circle at -4.17% 95.45%, #7842de 0, #5330d1 25%, #111ec2 50%, #000fb3 75%, #0009a6 100%);
+    font-family:"Rockwell"; //Brush Script MT
+    color: #0085ff ; //linear-gradient(to left bottom, #370537, #5e0b52, #c, #b91283, #eb1297);
+    font-size:95%;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    //background-color: white;
+  }
+  
+  .loader {
+    max-width: 15rem;
+    width: 100%;
+    height: auto;
+    stroke-linecap: round;
+  }
+
+  circle {
+    fill: none;
+    stroke-width: 5.5; // Permet de jouer sur la largeur des demis cercle
+    animation-name: preloader;
+    animation-duration: 2s; //Permet de modifier la durée de rotation des demis cercle
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    transform-origin: 170px 170px;
+    will-change: transform;
+  
+    &:nth-of-type(1) {
+      stroke-dasharray: 780px;
+    }
+  
+    &:nth-of-type(2) {
+      stroke-dasharray: 650px;
+    }
+  
+    &:nth-of-type(3) {
+      stroke-dasharray: 500px;
+    }
+  
+    &:nth-of-type(4) {
+      stroke-dasharray: 300px;
+    }
+  
+    @for $i from 1 through 4 {
+      &:nth-of-type(#{$i}) {
+        animation-delay: -#{$i * 0.15}s;
+      }
+    }
+  }
+  
+  @keyframes preloader {
+    100% {
+      transform: rotate(360deg);
+    }
+  }

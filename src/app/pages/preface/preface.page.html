@@ -1,0 +1,37 @@
+
+<ion-slide>
+  
+  <ion-fab horizontal="end" vertical="top" slot="fixed" class="contact">
+    <ion-fab-button class="boutonContactCouleur">
+      <ion-icon name="people-outline"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list>
+      <ion-fab-button color="light">
+        <ion-icon name="logo-whatsapp"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="light">
+        <ion-icon name="logo-facebook"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="light">
+        <ion-icon name="mail"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="light">
+        <ion-icon name="logo-twitter"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
+  <ion-row >
+    <ion-col>
+      <ion-button class="positionButtonSortir" (click)="quit()"  >QUITTER</ion-button>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-button class="positionButtonEntrer" (click)="goToLogin()"  >ENTRER</ion-button>
+    </ion-col>
+  </ion-row>
+
+  
+
+</ion-slide>

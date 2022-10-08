@@ -1,0 +1,31 @@
+.titlebutton{
+    background: linear-gradient(to top, #09d3fd, #00adff, #0085ff, #0056f0, #0000c8);
+    font-family:"Rockwell";
+    font-size:95%;
+    color: white;
+    min-height: 25px;
+  }
+  
+  ion-item{
+      font-size:14px;
+      font-family:"Rockwell";
+  }
+
+  .text_inf{
+    color: #0085ff;
+    font-size:14px;
+    font-family:"Rockwell";
+  }
+
+  .label{
+    color: white;
+    background-color: linear-gradient(to bottom, #09d3fd, #00adff, #0085ff, #0056f0, #0000c8);
+    min-block-size: 20px;
+  }
+
+  .textarea{
+    max-height: 80px;
+    min-height: 80px;
+    min-width: auto;
+    left:50em;
+  }

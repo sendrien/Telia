@@ -1,0 +1,88 @@
+<ion-header>
+  <ion-toolbar class="col-entete-texte">
+    <ion-buttons slot="start">
+      <ion-button (click)="backToLogin()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="titrePolice">Telia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content fullscreen>
+  <ion-row>
+
+    <ion-col size="12">
+      <ion-item lines="full">
+          <ion-label class=" ion-text-center">Nom<span class="mention text-italique">&nbsp;*</span> :</ion-label>
+          <ion-input class="textPolice ion-text-center" type="text" placeholder="Votre nom" [(ngModel)]="your_name" clearInput ngModel required></ion-input>
+      </ion-item>
+    </ion-col>
+  
+    <ion-col size="12">
+      <ion-item lines="full">
+          <ion-label class=" ion-text-center">Prénom&nbsp;(s)<span class="mention text-italique">&nbsp;*</span> :</ion-label>
+          <ion-input class="textPolice ion-text-center" name="prenom" required type="text"  placeholder="Votre prénom" [(ngModel)]="monPrenom" clearInput #prename="ngModel" ></ion-input>
+      </ion-item>
+    </ion-col>
+  
+    <ion-col size="12">
+      <ion-item lines="full">
+        <ion-label class=" ion-text-center">Mot de passe<span class="mention text-italique">&nbsp;*</span> :</ion-label>
+        <ion-input class="textPolice ion-text-center" type="password" placeholder="Votre mot de passe" [(ngModel)]="password" clearInput ngModel required></ion-input>
+      </ion-item>
+    </ion-col>
+
+    <ion-col size="12">
+      <ion-item lines="full">
+        <ion-label class="ion-text-center">Confirmez<span class="mention text-italique">&nbsp;*</span> :</ion-label>
+        <ion-input class="textPolice ion-text-center" type="password" placeholder="Confirmer le mot de passe" [(ngModel)]="confirm_pass" clearInput ngModel required></ion-input>
+      </ion-item>
+    </ion-col>
+
+    <ion-col size="12">
+      <ion-item lines="full">
+        <ion-label>Pays</ion-label>
+        <ion-select ok-text="OK" cancel-text="Annuler">
+          <ion-select-option value="dos">DOS</ion-select-option>
+          <ion-select-option value="lunix">Linux</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-col>
+
+    <ion-col size="12">
+      <ion-item lines="full">
+        <ion-label class=" ion-text-center">Téléphone<span class="mention text-italique">&nbsp;*</span> :</ion-label>
+        <ion-input class="textPolice ion-text-center"  placeholder="Votre téléphone" name="tel" required [(ngModel)]="monTel" clearInput  #teleph="ngModel">&nbsp;+226</ion-input>
+      </ion-item>
+    </ion-col>
+    
+    <ion-col size="12">
+      <ion-item lines="full">
+        <ion-label class=" ion-text-center">Email :</ion-label>
+        <ion-input class="textPolice ion-text-center" type="text" placeholder="Votre email" [pattern]= "mailPattern" [(ngModel)]="email_address" clearInput ngModel></ion-input>
+      </ion-item>
+    </ion-col>
+
+    <ion-col size="12">
+      <ion-item lines="full">
+        <ion-label class=" ion-text-center">WhatsApp :</ion-label>
+        <ion-input class="textPolice ion-text-center" placeholder="Votre whatsapp" [(ngModel)]="monWhat" clearInput  #teleph="ngModel"></ion-input>
+      </ion-item>
+    </ion-col>
+
+  </ion-row>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-row>
+      <ion-col class="ion-text-center">
+        <ion-button expand="full"  (click)="tryRegister()">Valider</ion-button>
+        <br>
+      </ion-col>
+    </ion-row>  
+  </ion-toolbar>
+</ion-footer> 

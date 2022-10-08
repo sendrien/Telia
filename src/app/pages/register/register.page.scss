@@ -1,0 +1,25 @@
+ion-content {
+    --offset-bottom: auto!important;
+    background: white;
+    --overflow: hidden;
+    overflow: auto;
+    &::-webkit-scrollbar {
+    display: none;
+    }
+}
+
+ion-button{
+  --background:   linear-gradient(to bottom, #09d3fd, #00adff, #0085ff, #0056f0, #0000c8);
+  font-family:"Rockwell";
+  font-size:95%;
+}
+
+ion-item{
+    font-size:14px;
+    font-family:"times new roman";
+}
+
+ion-select{
+    font-size:14px;
+    font-family:"times new roman";
+}

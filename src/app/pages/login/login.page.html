@@ -1,0 +1,26 @@
+  <ion-slide class="style-body">
+    <ion-card  class="ion-text-center formCard boutonCard">
+      <br>
+      <ion-row>
+        <ion-col>
+          <ion-input class="fond" [pattern]="mobilPattern" placeholder="Numéro de téléphone" [(ngModel)]="tel" clearInput ngModel required></ion-input>
+        </ion-col>
+      </ion-row>
+      <br>
+      <ion-row>
+        <ion-col>
+          <ion-input class="fond" type="password" placeholder="Mot de passe" [(ngModel)]="mdp" clearInput ngModel required></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <!-- Boutton de validation -->
+          <ion-button (click)="tryLogin()" class="connexion textPolice"  [disabled]="disabledButton" >Connexion</ion-button>
+          <p class="nouveau textPolice" (click)="Register()">Je m'inscris</p>
+          <p class="nouveau textPolice" (click)="Register()">J'ai oublié mot de passe</p>
+      </ion-col>
+    </ion-row>
+    </ion-card>
+    <ion-button class="boutonAccueil" expand="full"  (click)="returnAccueil()">Accueil</ion-button>
+  </ion-slide>
+  

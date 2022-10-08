@@ -1,0 +1,142 @@
+<ion-header>
+  <ion-toolbar class="new-background">
+    <!--<ion-buttons slot="start">
+      <ion-button (click)="backToLogin()">
+        <ion-icon name="arrow-undo"></ion-icon>
+      </ion-button>
+    </ion-buttons>-->
+    <ion-title class="titrePolice" (click)= "functionReturn()">YameKa</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="prosesLogout()">
+        <ion-icon slot="icon-only" name="exit"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-header class="homeHeader">
+  <!--<h4 class="ion-text-center textPolice">{{pageName | uppercase}}</h4>-->
+  <p class="ion-text-center textPolice ">{{examItemName}}</p>
+</ion-header>
+
+
+<ion-content fullscreen="true" scroll-y="false">
+  <br>
+    <ion-header >
+      <ion-button expand="block" (click)="takeDuty()">Prendre rendez-vous</ion-button>
+    </ion-header>
+  <br>
+
+  <ion-card>
+    <ion-item  lines="none" class="detail">
+      <ion-label class="ion-text-justify">Prix de l'examen:</ion-label>
+      <ion-avatar slot="start">
+        <img src="./assets/Prix.png"/>
+      </ion-avatar>
+    </ion-item>
+      <ion-text >
+        <p class="titleColor ion-text-center avat">{{details.Prix}} F.CFA</p>
+      </ion-text>
+  </ion-card>
+
+  <ion-card>
+    <ion-item  lines="none" class="detail">
+      <ion-label class="ion-text-justify">Téléphone:</ion-label>
+      <ion-avatar slot="start">
+        <img src="./assets/téléphone.png"/>
+      </ion-avatar>
+    </ion-item>
+      <ion-text >
+        <p class="titleColor ion-text-center avat">{{details.Tel}}</p>
+      </ion-text>
+  </ion-card>
+
+    <ion-card>
+      <ion-item  lines="none" class="detail">
+        <ion-label class="ion-text-justify">Aresse email:</ion-label>
+        <ion-avatar slot="start">
+          <img src="./assets/email.png"/>
+        </ion-avatar>
+      </ion-item>
+        <ion-text >
+          <p class="titleColor ion-text-center avat">{{details.E_mail}}</p>
+        </ion-text>
+    </ion-card>
+
+    <ion-card>
+      <ion-item lines="none" class="detail">
+        <ion-label class="ion-text-justify">Site Web:</ion-label>
+        <ion-avatar slot="start">
+          <img src="./assets/siteweb.png"/>
+        </ion-avatar>
+      </ion-item>
+        <ion-text >
+          <p class="titleColor ion-text-center avat">{{details.site_web}}</p>
+        </ion-text>
+    </ion-card>
+
+    <ion-card>
+      <ion-item  lines="none" class="detail">
+        <ion-label class="ion-text-justify">Disponibilité:</ion-label>
+        <ion-avatar slot="start">
+          <img src="./assets/disponibilite.png"/>
+        </ion-avatar>
+      </ion-item>
+        <ion-text>
+          <p class="titleColor ion-text-center avat">{{details.Jour}}  {{details.Heure}}</p>
+        </ion-text>
+    </ion-card>
+
+    <ion-card>
+      <ion-item lines="none" class="detail">
+        <ion-label class="ion-text-justify">Position géographique:</ion-label>
+        <ion-avatar slot="start">
+          <img src="./assets/Adresse.png"/>
+        </ion-avatar>
+      </ion-item>
+        <ion-text>
+          <p class="titleColor ion-text-center avat">{{details.Adresse}}</p>
+        </ion-text>
+    </ion-card>
+    
+    <ion-card *ngIf="hideConditionExam">
+      <ion-item  lines="none" class="detail">
+        <ion-label class="ion-text-justify">Recommandation:</ion-label>
+        <ion-avatar slot="start">
+          <img src="./assets/Conditions.png"/>
+        </ion-avatar>
+      </ion-item>
+        <ion-text>
+          <p class="titleColor ion-text-center avat">{{details.Contrainte}}</p>
+        </ion-text>
+    </ion-card>
+
+    <ion-card>
+      <ion-item  lines="none" class="detail">
+        <ion-label class="ion-text-justify">Assurances prises en charge:</ion-label>
+        <ion-avatar slot="start">
+          <img src="./assets/Assurances.png"/>
+        </ion-avatar>
+      </ion-item>
+        <ion-text>
+          <p class="titleColor ion-text-center avat">{{details.assurances}}</p>
+        </ion-text>
+    </ion-card>
+<!-- Ancien model ne pas supprimer-->
+<!--<ion-item class="listes avat">
+      <ion-avatar slot="start">
+        <img src="./assets/Prix.png"/>
+      </ion-avatar>
+        <ion-text >
+          <p class="titleColor " style="text-align: left;font-family:'times new roman';font-size:12px;">{{details.Prix}} F.CFA</p>
+        </ion-text>
+    </ion-item>-->
+</ion-content>
+
+<!--<ion-footer>
+  <ion-toolbar >
+    <ion-title class="new-background textPolice canale"><span class=" marquee-rtl">
+      {{bandeMessage.bandeannonce}}
+      </span></ion-title>
+  </ion-toolbar>
+</ion-footer> -->
