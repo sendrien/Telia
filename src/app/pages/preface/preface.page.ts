@@ -23,7 +23,6 @@ export class PrefacePage implements OnInit {
   }
   goToLogin(){
     this.router.navigate(['/login']);
-
   }
 
   quit(){
